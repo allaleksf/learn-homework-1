@@ -19,7 +19,24 @@ def main():
     Эта функция вызывается автоматически при запуске скрипта в консоли
     В ней надо заменить pass на ваш код
     """
-    pass
+    age = input("Сколько вам лет? ")
+    age = int(age)
+
+    answer=your_stage(age)
+    print(answer)
+
+def your_stage(age):
+    if age < 7:
+        stage = "сад"
+    elif age < 18:
+        stage = "школа"
+    elif age < 23:
+        stage = "ВУЗ"
+    else:
+        stage = "работай"
+    return stage
+
+
 
 if __name__ == "__main__":
     main()
