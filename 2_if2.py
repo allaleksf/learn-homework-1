@@ -20,7 +20,32 @@ def main():
     Эта функция вызывается автоматически при запуске скрипта в консоли
     В ней надо заменить pass на ваш код
     """
-    pass
+    str1=input("строка 1")
+    str2=input("строка 2")
+    str3 = input("строка 3")
+    str4 = input("строка 4")
+
+    a=str_f(str1, str2)
+    print(a)
+    a = str_f(str2, str3)
+    print(a)
+    a = str_f(str3, str4)
+    print(a)
+
+def str_f(str1, str2):
+
+
+    if len(str1)==0 or len(str2)==0:
+        return 0
+
+    if str1==str2:
+        return 1
+    if (str1!=str2 and len(str1)>len(str2)):
+        return 2
+    if (str1!=str2 and str2=="learn"):
+        return 3
+
+
     
 if __name__ == "__main__":
     main()
