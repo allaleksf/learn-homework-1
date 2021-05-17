@@ -13,8 +13,9 @@
 
 """
 import logging
-
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
+
+import ephem
 
 logging.basicConfig(format='%(name)s - %(levelname)s - %(message)s',
                     level=logging.INFO,
@@ -43,7 +44,7 @@ def talk_to_me(update, context):
 
 
 def main():
-    mybot = Updater("КЛЮЧ, КОТОРЫЙ НАМ ВЫДАЛ BotFather", request_kwargs=PROXY, use_context=True)
+    mybot = Updater("1802019533:AAGh0ynWygrbHOIT16ihqgMWVUR0sa1GnR8", request_kwargs=PROXY, use_context=True)
 
     dp = mybot.dispatcher
     dp.add_handler(CommandHandler("start", greet_user))
