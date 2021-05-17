@@ -21,7 +21,7 @@ def hello_user():
         try:
             pr1 = input("Как дела? ")
             if pr1 == "Хорошо":
-                print(f"Молодец, раз {pr1}!")
+                print("Молодец, раз так!")
                 break
         except KeyboardInterrupt:
             print("что так?")
