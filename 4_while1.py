@@ -14,9 +14,7 @@ def hello_user():
     """
     Замените pass на ваш код
     """
-hello_user()
 
-def hello_user():
     while True:
         pr1 = input("Как дела? ")
         if pr1=="Хорошо":
