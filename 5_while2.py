@@ -15,19 +15,32 @@
     
 """
 
-questions_and_answers = {"Как дела": "Хорошо!", "Что делаешь?": "Программирую"}
+questions_and_answers = {
+    "как дела": "Хорошо!",
+    "что делаешь": "Программирую",
+    "получается": "не очень",
+    "что так":"норм",
+}
+
 
 def ask_user(answers_dict):
     """
     Замените pass на ваш код
-    """
-    que1=input("Спроси меня")
+    que1 = input("Спроси меня: ")
+    for key in questions_and_answers:
+        if key == que1:
+            print("ответ:", questions_and_answers[key])
+    else:
+        print("ответ: не знаю")
+"""
 
-    for key, value in questions_and_answers.items():
-        if key==que1:
-            print(value)
-        else: print("не знаю")
+    while True:
+        que1 = input("Спроси меня: ")
+        if que1 in questions_and_answers:
+            print(questions_and_answers[que1])
 
-    
+        if que1 not in questions_and_answers:
+            exit("ответ: не знаю")
+
 if __name__ == "__main__":
     ask_user(questions_and_answers)
